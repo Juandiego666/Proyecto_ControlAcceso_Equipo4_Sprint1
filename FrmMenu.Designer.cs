@@ -81,11 +81,11 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(0, 0);
+            this.btnExportar.Location = new System.Drawing.Point(320, 400); // <-- Coordenadas corregidas para que no se oculte
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(75, 23);
-            this.btnExportar.TabIndex = 0;
-            this.btnExportar.Text = "Exportar";
+            this.btnExportar.Size = new System.Drawing.Size(140, 30); // <-- Tamaño ajustado para el texto largo
+            this.btnExportar.TabIndex = 7;
+            this.btnExportar.Text = "📊 Exportar Reporte";
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // txtNombre
@@ -101,6 +101,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(100, 22);
             this.txtDNI.TabIndex = 5;
+            this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
             // btnRegistrar
             // 
@@ -115,6 +116,7 @@
             // FrmMenu
             // 
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExportar); // <-- LA LÍNEA CLAVE QUE AGREGAMOS
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.txtNombre);
